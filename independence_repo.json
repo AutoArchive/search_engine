@@ -5,7 +5,7 @@
     "path": "https://news.transchinese.org/",
     "url": "https://news.transchinese.org/",
     "is_restricted": false,
-    "type": "resource",
+    "type": "news",
     "size": 3883,
     "last_updated": null
   },
@@ -15,7 +15,7 @@
     "path": "https://digital.transchinese.org/",
     "url": "https://digital.transchinese.org/",
     "is_restricted": false,
-    "type": "resource",
+    "type": "document",
     "size": 1390,
     "last_updated": null
   },

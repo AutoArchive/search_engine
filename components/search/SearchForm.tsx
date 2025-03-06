@@ -5,6 +5,7 @@ import projectsData from '@/data/projectsData'
 type ContentType = 'article' | 'post' | 'page' | 'resource' | 'document' | 'news' | 'webpage' | 'comic' | 'novel'
 
 const CONTENT_TYPES: { label: string; value: ContentType }[] = [
+  { label: '全部', value: 'resource' },
   { label: '文档', value: 'document' },
   { label: '新闻', value: 'news' },
   { label: '网页', value: 'webpage' },
@@ -30,13 +31,13 @@ interface SearchFormProps {
 export default function SearchForm({ onSearch, isSearching }: SearchFormProps) {
   const [searchQuery, setSearchQuery] = useState('')
   const [showAdvanced, setShowAdvanced] = useState(false)
+  const [includeRestricted, setIncludeRestricted] = useState(true)
   const [selectedDomains, setSelectedDomains] = useState<string[]>(
     DOMAIN_OPTIONS.filter(
-      (option) => option.type === 'resource' && !option.is_restricted
+      (option) => option.type === 'resource' && (includeRestricted || !option.is_restricted)
     ).map((option) => option.value)
   )
-  const [activeType, setActiveType] = useState<ContentType>('article')
-  const [includeRestricted, setIncludeRestricted] = useState(false)
+  const [activeType, setActiveType] = useState<ContentType>('resource')
   const [tag, setTag] = useState('')
   const [year, setYear] = useState('')
   const [region, setRegion] = useState('')
