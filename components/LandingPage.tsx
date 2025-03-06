@@ -2,13 +2,9 @@
 
 import Link from 'next/link'
 import { FiBook, FiSearch, FiUsers, FiCalendar, FiChevronDown, FiChevronUp } from 'react-icons/fi'
-import Card from '@/components/Card'
 import projectsData from '@/data/projectsData'
-import HeroSection from '@/components/HeroSection'
 import siteMetadata from '@/data/siteMetadata'
-import NewsletterForm from 'pliny/ui/NewsletterForm'
 import PostList from '@/components/PostList'
-import Community from './Community'
 import IntroSection from '@/components/IntroSection'
 import SearchForm from '@/components/search/SearchForm'
 import SearchResults from '@/components/search/SearchResults'
