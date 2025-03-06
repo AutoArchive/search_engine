@@ -6,13 +6,13 @@ const navigationLinks = [
       { 
         name: "MtF.wiki", 
         url: "https://mtf.wiki/zh-cn/", 
-        description: "关于女性倾向跨性别者的综合性维基百科网站",
+        description: "关于女性倾向跨性别者(MtF)的综合性维基百科网站",
         tags: ["MtF"] 
       },
       { 
         name: "FtM.wiki", 
         url: "https://ftm.wiki", 
-        description: "关于男性倾向跨性别者的综合性维基百科网站",
+        description: "关于男性倾向跨性别者(FtM)的综合性维基百科网站",
         tags: ["FtM"] 
       },
       { 
@@ -30,7 +30,7 @@ const navigationLinks = [
       { 
         name: "MtF.wiki TFSci", 
         url: "https://tfsci.mtf.wiki", 
-        description: "收集和翻译跨性别相关的科研文献",
+        description: "女性倾向跨性别者科学”（Transfeminine Science）中文译本存档站",
         tags: ["MtF", "学术"] 
       },
       { 
@@ -38,6 +38,12 @@ const navigationLinks = [
         url: "https://awesometrans.github.io/awesometrans_zh/", 
         description: "跨性别相关资源的精选集合",
         tags: ["MtF", "FtM"] 
+      },
+      { 
+        name: "跨性別資訊 - 臺北市政府", 
+        url: "https://transgender.taipei", 
+        description: "台北市政府提供的跨性别相关政策与资讯",
+        tags: ["台湾", "政府", "官方"] 
       }
     ]
   },
@@ -65,7 +71,7 @@ const navigationLinks = [
       { 
         name: "MtF 指南针", 
         url: "https://mtf.party", 
-        description: "MtF跨性别者的综合指南与资源导航",
+        description: "一个为MtF群体提供各种帮助指南的站点",
         tags: ["MtF", "指南"] 
       },
       { 
@@ -82,31 +88,31 @@ const navigationLinks = [
       { 
         name: "Project Trans Blog", 
         url: "https://blog.project-trans.org", 
-        description: "专注于跨性别议题的博客平台",
+        description: "Project Trans 的博客平台",
         tags: ["MtF", "FtM", "博客"] 
       },
       { 
         name: "Project Trans Community", 
         url: "https://link.mtf.wiki/discord", 
-        description: "Discord上的跨性别社区讨论组",
+        description: "Discord 上的跨性别社区讨论组",
         tags: ["社区", "聊天"] 
       },
       { 
         name: "r/mtf_zh", 
         url: "https://reddit.com/r/mtf_zh", 
-        description: "Reddit上的中文MtF讨论组",
+        description: "Reddit 上的中文MtF讨论组",
         tags: ["MtF", "社区"] 
       },
       { 
         name: "MtF Hub", 
         url: "https://hub.mtf.party/explore", 
-        description: "MtF社区资源聚合平台",
+        description: "由琴春(@vxst@hub.mtf.party)运营，面向跨性别🏳️‍⚧️人士开放注册的社区平台",
         tags: ["MtF", "社区"] 
       },
       { 
         name: "One Among Us 社群", 
         url: "https://oneamongus.ca", 
-        description: "跨性别者互助与分享的社区平台",
+        description: "去世跨性别者与友跨人士建立的网站",
         tags: ["社区", "支持"] 
       },
       { 
@@ -147,7 +153,7 @@ const navigationLinks = [
       { 
         name: "跨樂園", 
         url: "https://transnation.asia", 
-        description: "香港跨性别社区组织与资源平台",
+        description: "跨性別交友及分享平台",
         tags: ["香港", "社区", "支持"] 
       },
       { 
@@ -171,7 +177,7 @@ const navigationLinks = [
       { 
         name: "跨性别学术小组", 
         url: "https://transinacademia.org/", 
-        description: "关注学术领域跨性别议题的小组",
+        description: "关注学术领域跨性别议题的组织与网站",
         tags: ["学术", "社区"] 
       },
       { 
@@ -185,6 +191,12 @@ const navigationLinks = [
         url: "https://facebook.com/groups/468518206672039", 
         description: "台湾同志热线的跨性别支持小组",
         tags: ["台湾", "社区", "支持"] 
+      },
+      { 
+        name: "眾樂教會", 
+        url: "https://onebodyinthechrist.blogspot.com", 
+        description: "香港性别友善信仰社区",
+        tags: ["香港", "信仰", "支援"] 
       }
     ]
   },
@@ -229,14 +241,8 @@ const navigationLinks = [
       { 
         name: "生如夏花", 
         url: "https://viva-la-vita.org/", 
-        description: "关注性少数群体的多元故事与体验",
+        description: "关注性少数群体的性体验",
         tags: ["博客", "性体验"] 
-      },
-      { 
-        name: "那些秋叶", 
-        url: "https://one-among.us", 
-        description: "分享跨性别者个人故事的平台",
-        tags: ["博客", "故事"] 
       },
       { 
         name: "KnowSex", 
@@ -278,12 +284,6 @@ const navigationLinks = [
         url: "https://mastodon.social/@FtMwiki", 
         description: "FtM.wiki的官方Mastodon账号",
         tags: ["FtM", "社交媒体"] 
-      },
-      { 
-        name: "跨性別資訊 - 臺北市政府", 
-        url: "https://transgender.taipei", 
-        description: "台北市政府提供的跨性别相关政策与资讯",
-        tags: ["台湾", "政府", "官方"] 
       }
     ]
   },
@@ -331,12 +331,6 @@ const navigationLinks = [
         url: "https://facebook.com/groups/1008074439681831", 
         description: "台湾非二元性别者的互助社区",
         tags: ["台湾", "非二元", "社区"] 
-      },
-      { 
-        name: "眾樂教會", 
-        url: "https://onebodyinthechrist.blogspot.com", 
-        description: "香港性别友善信仰社区",
-        tags: ["香港", "信仰", "支援"] 
       }
     ]
   }
