@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import { SearchParams } from '@/components/search/SearchResult'
 import projectsData from '@/data/projectsData'
 
-type ContentType = 'resource' | 'comic' | 'novel'
+type ContentType = 'document' | 'news' | 'webpage' | 'comic' | 'novel'
 
 const CONTENT_TYPES: { label: string; value: ContentType }[] = [
-  { label: '文档', value: 'resource' },
+  { label: '文档', value: 'document' },
+  { label: '新闻', value: 'news' },
+  { label: '网页', value: 'webpage' },
   { label: '漫画', value: 'comic' },
   { label: '小说', value: 'novel' },
 ]
