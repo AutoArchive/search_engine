@@ -22,27 +22,69 @@ interface SearchIndex {
   }
 }
 
+// Add this interface to include ranking score
+interface RankedSearchResult extends SearchResult {
+  score: number
+}
+
 function stripFileExtension(filename: string): string {
   return filename.replace(/\.[^/.]+$/, '')
 }
 
+// Add scoring function to calculate relevance
+function calculateScore(key: string, document: Document, query: string): number {
+  if (!query) return 1; // Base score for matching other filters
+  
+  const normalizedQuery = query.toLowerCase();
+  const normalizedKey = key.toLowerCase();
+  const normalizedDescription = document.description.toLowerCase();
+  
+  let score = 0;
+  
+  // Exact match in key (highest priority)
+  if (normalizedKey === normalizedQuery) {
+    score += 10;
+  }
+  // Key starts with query
+  else if (normalizedKey.startsWith(normalizedQuery)) {
+    score += 7;
+  }
+  // Query is within key
+  else if (normalizedKey.includes(normalizedQuery)) {
+    score += 5;
+  }
+  
+  // Description matches
+  if (normalizedDescription.includes(normalizedQuery)) {
+    score += 3;
+    
+    // Bonus for description starting with query
+    if (normalizedDescription.startsWith(normalizedQuery)) {
+      score += 2;
+    }
+  }
+  
+  // Bonus for tag matches
+  if (document.tags.some(tag => tag.toLowerCase().includes(normalizedQuery))) {
+    score += 2;
+  }
+  
+  return score;
+}
+
 function searchDocuments(index: SearchIndex, params: SearchParams): SearchResult[] {
-  const searchResults: SearchResult[] = []
-  const MAX_RESULTS = 600
+  const rankedResults: RankedSearchResult[] = [];
+  const MAX_RESULTS = 600;
 
   for (const domain in index) {
     // Skip if domains specified and current domain not included
     if (params.domain && params.domain != '' && !params.domain.includes(domain)) {
-      continue
+      continue;
     }
 
-    const domainIndex = index[domain]
+    const domainIndex = index[domain];
     for (const key in domainIndex) {
-      if (searchResults.length >= MAX_RESULTS) {
-        return searchResults
-      }
-
-      const document = domainIndex[key]
+      const document = domainIndex[key];
 
       // Check all filter conditions
       if (
@@ -53,9 +95,13 @@ function searchDocuments(index: SearchIndex, params: SearchParams): SearchResult
         (!params.year || document.date.includes(params.year)) && // Year match
         (!params.region || document.region.toLowerCase() === params.region.toLowerCase()) // Region match
       ) {
-        const link: string = document.link ? document.link : 'unknown'
-        searchResults.push({
-          url: `https://${domain}/${stripFileExtension(key)}`, // Handle null links
+        const link: string = document.link ? document.link : 'unknown';
+        
+        // Calculate score for this result
+        const score = calculateScore(key, document, params.query);
+        
+        rankedResults.push({
+          url: `https://${domain}/${stripFileExtension(key)}`,
           description: document.description,
           tags: document.tags,
           type: document.type,
@@ -65,12 +111,17 @@ function searchDocuments(index: SearchIndex, params: SearchParams): SearchResult
           format: document.format,
           size: document.size,
           link: link,
-        })
+          score: score
+        });
       }
     }
   }
 
-  return searchResults
+  // Sort results by score in descending order
+  rankedResults.sort((a, b) => b.score - a.score);
+  
+  // Return top results (up to MAX_RESULTS)
+  return rankedResults.slice(0, MAX_RESULTS);
 }
 
 export async function GET(request: Request) {
