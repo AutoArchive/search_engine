@@ -2,7 +2,7 @@
 const siteMetadata = {
   title: '多元性别搜索引擎',
   author: '性与性别多态计划',
-  headerTitle: 'Polymorph',
+  headerTitle: 'TransIndex',
   description: '专注于变装、CDTS、伪娘、男娘、性转等多元性别表达内容的垂直搜索平台',
   language: 'zh',
   theme: 'system', // system, dark or light
@@ -13,15 +13,15 @@ const siteMetadata = {
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'admin@transchinese.org',
   github: 'https://github.com/project-polymorph',
-  x: 'https://x.com/transchineseorg',
+  // x: 'https://x.com/transchineseorg',
   // twitter: 'https://twitter.com/Twitter',
   // facebook: 'https://facebook.com',
   // youtube: 'https://youtube.com',
   // linkedin: 'https://www.linkedin.com',
   // threads: 'https://www.threads.net',
   // instagram: 'https://www.instagram.com',
-  medium: 'https://medium.com/@transchinese',
-  bluesky: 'https://bsky.app/profile/transchinese.bsky.social',
+  // medium: 'https://medium.com/@transchinese',
+  // bluesky: 'https://bsky.app/profile/transchinese.bsky.social',
   locale: 'zh-CN',
   // set to true if you want a navbar fixed to the top
   stickyNav: false,
