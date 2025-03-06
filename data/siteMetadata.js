@@ -1,9 +1,9 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: '多元性别搜索引擎',
-  author: '性与性别多态计划',
+  author: '多元寻迹',
   headerTitle: 'TransIndex',
-  description: '专注于变装、CDTS、伪娘、男娘、性转等多元性别表达内容的垂直搜索平台',
+  description: '专注于变装、CDTS、伪娘、男娘、性转等多元性别表达内容的垂直搜索与索引平台',
   language: 'zh',
   theme: 'system', // system, dark or light
   siteUrl: 'https://transchinese.org',
