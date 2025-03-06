@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { SearchParams } from '@/components/search/SearchResult'
 import projectsData from '@/data/projectsData'
 
-type ContentType = 'document' | 'news' | 'webpage' | 'comic' | 'novel'
+type ContentType = 'article' | 'post' | 'page' | 'resource' | 'document' | 'news' | 'webpage' | 'comic' | 'novel'
 
 const CONTENT_TYPES: { label: string; value: ContentType }[] = [
   { label: '文档', value: 'document' },
@@ -35,7 +35,7 @@ export default function SearchForm({ onSearch, isSearching }: SearchFormProps) {
       (option) => option.type === 'resource' && !option.is_restricted
     ).map((option) => option.value)
   )
-  const [activeType, setActiveType] = useState<ContentType>('resource')
+  const [activeType, setActiveType] = useState<ContentType>('article')
   const [includeRestricted, setIncludeRestricted] = useState(false)
   const [tag, setTag] = useState('')
   const [year, setYear] = useState('')
