@@ -1,13 +1,13 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: '多元性别中文数字图书馆',
+  title: '多元性别搜索引擎',
   author: '性与性别多态计划',
   headerTitle: 'Polymorph',
-  description: '希望成为中文多元性别社群历史的见证者',
+  description: '专注于变装、CDTS、伪娘、男娘、性转等多元性别表达内容的垂直搜索平台',
   language: 'zh',
   theme: 'system', // system, dark or light
   siteUrl: 'https://transchinese.org',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
+  siteRepo: 'https://github.com/project-polymorph',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.jpg`,
   // mastodon: 'https://mastodon.social/@mastodonuser',
@@ -22,7 +22,7 @@ const siteMetadata = {
   // instagram: 'https://www.instagram.com',
   medium: 'https://medium.com/@transchinese',
   bluesky: 'https://bsky.app/profile/transchinese.bsky.social',
-  locale: 'en-US',
+  locale: 'zh-CN',
   // set to true if you want a navbar fixed to the top
   stickyNav: false,
   analytics: {

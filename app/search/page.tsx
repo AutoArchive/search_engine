@@ -80,14 +80,9 @@ function SearchContent() {
         ...(region && { region }),
       })
 
-      router.push(`?${params.toString()}`, { scroll: false })
-
-      const response = await fetch(`/api/search?${params.toString()}`)
-      if (!response.ok) {
-        throw new Error('Search failed')
-      }
-      const data: SearchResult[] = await response.json()
-      setResults(data)
+      // Redirect search queries to the homepage
+      router.push(`/?${params.toString()}`)
+      return
     } catch (err) {
       setError('Search failed. Please try again.')
     } finally {
