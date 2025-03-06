@@ -2,12 +2,12 @@ const IntroSection = () => (
     <div className="mx-auto max-w-7xl px-6 lg:px-8 mb-12">
         <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800 p-8 shadow-lg">
             <div className="grid gap-8 md:grid-cols-2">
-                <div className="space-y-4">
+                {/* <div className="space-y-4">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white">关于多元寻迹</h2>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                     『多元寻迹』 是一个聚焦跨性别、变装（CDTS）、性转、伪娘等多元性别表达与文化的专业搜索与内容导航平台。
                     我们致力于通过先进的数据检索技术与AI辅助导航，帮助用户快速准确地找到高质量且真实可信的相关资源。同时，通过长期存档与索引，『多元寻迹』保护那些易被忽略的多元文化表达与故事，让每个独特的灵魂都被温柔地看见与记录。                    </p>
-                </div>
+                </div> */}
                 {/* <div className="space-y-4">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white">关于跨性别</h2>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -17,8 +17,8 @@ const IntroSection = () => (
             </div>
             <div className="mt-6 border-t border-gray-200 dark:border-gray-700 pt-6">
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    本数字图书馆致力于收集、保存和展示与多元性别相关的中文资料，为理解和研究性别多样性提供全面的知识基础。我们希望通过知识的力量，促进社会对多元性别群体的理解与包容。
-                </p>
+                『多元寻迹』 是一个聚焦跨性别、非二元、变装（CDTS）、性转、伪娘等多元性别表达与文化的专业搜索与内容导航平台。
+                我们致力于通过先进的数据检索技术与AI辅助导航，帮助用户快速准确地找到高质量且真实可信的相关资源。同时，通过长期存档与索引，『多元寻迹』保护那些易被忽略的多元文化表达与故事，让每个独特的灵魂都被温柔地看见与记录。                   </p>
             </div>
         </div>
     </div>

@@ -93,7 +93,7 @@ function SearchContent() {
   return (
     <div className="mx-auto max-w-7xl p-8">
       <div className="mb-8 rounded-md bg-amber-50 p-4 text-center text-amber-800">
-        🚧 Experimental 🚧
+        🚧 实验性功能 🚧
       </div>
 
       <div className="flex flex-col items-center gap-6">

@@ -114,6 +114,9 @@ export default function LandingPage({ posts }) {
     <div className="space-y-12">
       {/* Search Section */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mb-8 rounded-md bg-amber-50 p-4 text-center text-amber-800">
+          🚧 实验性功能 🚧
+        </div>
         <div className="flex flex-col items-center gap-6">
           <h2 className="text-2xl font-bold">资料搜索</h2>
           <SearchForm
