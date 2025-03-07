@@ -6,11 +6,11 @@ type ContentType = 'article' | 'post' | 'page' | 'resource' | 'document' | 'news
 
 const CONTENT_TYPES: { label: string; value: ContentType }[] = [
   { label: '全部', value: 'resource' },
+  { label: '小说', value: 'novel' },
   { label: '文档', value: 'document' },
   { label: '新闻', value: 'news' },
   { label: '网页', value: 'webpage' },
   { label: '漫画', value: 'comic' },
-  { label: '小说', value: 'novel' },
 ]
 
 const DOMAIN_OPTIONS = projectsData.map((project) => ({
